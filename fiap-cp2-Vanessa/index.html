@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Passo Alto — expedições de trilha de fim de semana, com guia, transporte e grupo pequeno."
+    />
+    <title>Passo Alto — Expedições de trilha</title>
+    <!-- CSS RESET - já vem pronto, não precisa mexer -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+      button {
+        cursor: pointer;
+      }
+      a {
+        color: inherit;
+      }
+      ul,
+      ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      fieldset {
+        margin: 0;
+      }
+      .visually-hidden {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+    <!-- Fontes: as 9 famílias dos 5 pares já carregadas. No CSS você só declara font-family. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Instrument+Sans:wght@400;500;600;700&family=Karla:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Young+Serif&family=Zilla+Slab:wght@500;700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ============================ TOPO ============================ -->
+    <header class="topo">
+      <a href="#inicio" class="marca" aria-label="Passo Alto — início">
+        <span class="marca__icone" aria-hidden="true">▲</span>
+        <span class="marca__nome">Passo Alto</span>
+      </a>
+
+      <nav class="menu" aria-label="Navegação principal">
+        <ul class="menu__lista">
+          <li><a href="#roteiros">Roteiros</a></li>
+          <li><a href="#saidas">Próximas saídas</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+        </ul>
+      </nav>
+
+      <div class="topo__acoes">
+        <a class="btn btn--contorno" href="#">Entrar</a>
+        <a class="btn btn--principal" href="#inscricao">Quero ir</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================ HERO ============================ -->
+      <section
+        class="hero"
+        data-section="hero"
+        id="inicio"
+        aria-labelledby="hero-titulo"
+      >
+        <div class="hero__texto">
+          <p class="hero__chamada">Temporada 2027 aberta</p>
+          <h1 id="hero-titulo" class="hero__titulo">Suba<br />mais<br />alto</h1>
+          <p class="hero__lead">
+            Trilhas de fim de semana com guia credenciado, transporte saindo de
+            São Paulo e grupos de no máximo 12 pessoas. Você só precisa
+            aparecer com a bota amarrada.
+          </p>
+          <div class="hero__botoes">
+            <a class="btn btn--principal" href="#inscricao">Quero me inscrever</a>
+            <a class="btn btn--contorno" href="#saidas">Ver próximas saídas</a>
+          </div>
+        </div>
+
+        <article class="destaque" aria-labelledby="destaque-titulo">
+          <p class="destaque__rotulo">Próxima saída</p>
+          <span class="destaque__emoji" aria-hidden="true">🏔️</span>
+          <h2 id="destaque-titulo" class="destaque__titulo">Pico dos Marins</h2>
+          <ul class="destaque__info">
+            <li><strong>Data</strong> 14 e 15 nov</li>
+            <li><strong>Nível</strong> Intermediário</li>
+            <li><strong>Vagas</strong> 3 restantes</li>
+          </ul>
+          <a class="btn btn--escuro" href="#inscricao">Garantir vaga</a>
+        </article>
+
+        <ul class="numeros" aria-label="Passo Alto em números">
+          <li class="numeros__item">
+            <strong class="numeros__valor">120+</strong>
+            <span class="numeros__texto">trilhas guiadas</span>
+          </li>
+          <li class="numeros__item">
+            <strong class="numeros__valor">8 mil</strong>
+            <span class="numeros__texto">trilheiros na estrada</span>
+          </li>
+          <li class="numeros__item">
+            <strong class="numeros__valor">4,9</strong>
+            <span class="numeros__texto">nota média das saídas</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============================ ROTEIROS ============================ -->
+      <section
+        class="roteiros"
+        data-section="roteiros"
+        id="roteiros"
+        aria-labelledby="roteiros-titulo"
+      >
+        <header class="cabecalho">
+          <h2 id="roteiros-titulo">Escolha o seu tipo de trilha</h2>
+          <p class="cabecalho__lead">
+            Do primeiro passo ao cume: separamos os roteiros pelo cenário.
+          </p>
+        </header>
+
+        <ul class="roteiros__grade">
+          <li class="roteiro roteiro--serra">
+            <span class="roteiro__emoji" aria-hidden="true">⛰️</span>
+            <h3>Serra</h3>
+            <p>
+              Picos, mirantes e noites frias na barraca. Para quem quer subir de
+              verdade.
+            </p>
+            <a class="link-seta" href="#saidas">12 roteiros →</a>
+          </li>
+          <li class="roteiro roteiro--litoral">
+            <span class="roteiro__emoji" aria-hidden="true">🌊</span>
+            <h3>Litoral</h3>
+            <p>Costões e praias desertas.</p>
+            <a class="link-seta" href="#saidas">8 roteiros →</a>
+          </li>
+          <li class="roteiro roteiro--cachoeira">
+            <span class="roteiro__emoji" aria-hidden="true">💧</span>
+            <h3>Cachoeiras</h3>
+            <p>Trilha curta e banho gelado.</p>
+            <a class="link-seta" href="#saidas">10 roteiros →</a>
+          </li>
+          <li class="roteiro roteiro--noturna">
+            <span class="roteiro__emoji" aria-hidden="true">🌙</span>
+            <h3>Noturna</h3>
+            <p>Lanterna de cabeça, céu estrelado e nascer do sol no topo.</p>
+            <a class="link-seta" href="#saidas">5 roteiros →</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ========================= PRÓXIMAS SAÍDAS ========================= -->
+      <section
+        class="saidas"
+        data-section="saidas"
+        id="saidas"
+        aria-labelledby="saidas-titulo"
+      >
+        <header class="cabecalho cabecalho--lado">
+          <h2 id="saidas-titulo">Próximas saídas</h2>
+          <a class="link-seta" href="#">Ver calendário completo →</a>
+        </header>
+
+        <ul class="saidas__lista">
+          <li class="saida">
+            <p class="saida__data"><strong>14</strong> nov</p>
+            <span class="saida__emoji" aria-hidden="true">🏔️</span>
+            <div class="saida__info">
+              <h3>Pico dos Marins</h3>
+              <p class="saida__meta">Piquete, SP · 2 dias · 14 km</p>
+            </div>
+            <span class="selo selo--ultimas">Últimas vagas</span>
+            <p class="saida__preco">R$ 390</p>
+            <a class="btn btn--contorno btn--pequeno" href="#inscricao">Reservar</a>
+          </li>
+          <li class="saida">
+            <p class="saida__data"><strong>21</strong> nov</p>
+            <span class="saida__emoji" aria-hidden="true">💧</span>
+            <div class="saida__info">
+              <h3>Cachoeiras de Analândia</h3>
+              <p class="saida__meta">Analândia, SP · 1 dia · 9 km</p>
+            </div>
+            <span class="selo selo--iniciante">Iniciante</span>
+            <p class="saida__preco">R$ 180</p>
+            <a class="btn btn--contorno btn--pequeno" href="#inscricao">Reservar</a>
+          </li>
+          <li class="saida">
+            <p class="saida__data"><strong>28</strong> nov</p>
+            <span class="saida__emoji" aria-hidden="true">🌊</span>
+            <div class="saida__info">
+              <h3>Travessia Ubatuba</h3>
+              <p class="saida__meta">Ubatuba, SP · 2 dias · 22 km</p>
+            </div>
+            <span class="selo selo--novo">Novo</span>
+            <p class="saida__preco">R$ 450</p>
+            <a class="btn btn--contorno btn--pequeno" href="#inscricao">Reservar</a>
+          </li>
+          <li class="saida">
+            <p class="saida__data"><strong>05</strong> dez</p>
+            <span class="saida__emoji" aria-hidden="true">🌙</span>
+            <div class="saida__info">
+              <h3>Pedra Grande à noite</h3>
+              <p class="saida__meta">Atibaia, SP · 1 noite · 6 km</p>
+            </div>
+            <span class="selo selo--iniciante">Iniciante</span>
+            <p class="saida__preco">R$ 150</p>
+            <a class="btn btn--contorno btn--pequeno" href="#inscricao">Reservar</a>
+          </li>
+          <li class="saida">
+            <p class="saida__data"><strong>12</strong> dez</p>
+            <span class="saida__emoji" aria-hidden="true">⛰️</span>
+            <div class="saida__info">
+              <h3>Serra Fina — trecho 1</h3>
+              <p class="saida__meta">Passa Quatro, MG · 3 dias · 30 km</p>
+            </div>
+            <span class="selo selo--ultimas">Últimas vagas</span>
+            <p class="saida__preco">R$ 720</p>
+            <a class="btn btn--contorno btn--pequeno" href="#inscricao">Reservar</a>
+          </li>
+          <li class="saida">
+            <p class="saida__data"><strong>19</strong> dez</p>
+            <span class="saida__emoji" aria-hidden="true">🌲</span>
+            <div class="saida__info">
+              <h3>Caminhos do Mar</h3>
+              <p class="saida__meta">Cubatão, SP · 1 dia · 9 km</p>
+            </div>
+            <span class="selo selo--novo">Novo</span>
+            <p class="saida__preco">R$ 160</p>
+            <a class="btn btn--contorno btn--pequeno" href="#inscricao">Reservar</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ========================== COMO FUNCIONA ========================== -->
+      <section
+        class="passos"
+        data-section="passos"
+        id="como-funciona"
+        aria-labelledby="passos-titulo"
+      >
+        <header class="cabecalho">
+          <h2 id="passos-titulo">Como funciona</h2>
+          <p class="cabecalho__lead">
+            Três passos entre o sofá e o topo da montanha.
+          </p>
+        </header>
+
+        <ol class="passos__lista">
+          <li class="passo">
+            <span class="passo__numero">01</span>
+            <h3>Escolha a saída</h3>
+            <p>Filtre por nível, cenário e data. Cada roteiro mostra a distância e o desnível.</p>
+          </li>
+          <li class="passo">
+            <span class="passo__numero">02</span>
+            <h3>Faça a inscrição</h3>
+            <p>Preencha a ficha, conte sua experiência e reserve com um sinal de 30%.</p>
+          </li>
+          <li class="passo">
+            <span class="passo__numero">03</span>
+            <h3>Bota no pé</h3>
+            <p>Na véspera você recebe o ponto de encontro, a lista do que levar e o grupo.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============================ CHAMADA ============================ -->
+      <section
+        class="chamada"
+        data-section="chamada"
+        aria-labelledby="chamada-titulo"
+      >
+        <div class="chamada__texto">
+          <h2 id="chamada-titulo">Nunca perca uma janela de tempo bom</h2>
+          <p>
+            Receba as novas saídas antes de todo mundo, junto com a previsão do
+            tempo de cada roteiro.
+          </p>
+        </div>
+        <ul class="chamada__lista">
+          <li><span class="chamada__check" aria-hidden="true">✓</span> Aviso de vagas toda segunda</li>
+          <li><span class="chamada__check" aria-hidden="true">✓</span> Desconto de 10% para assinantes</li>
+          <li><span class="chamada__check" aria-hidden="true">✓</span> Dicas de equipamento e preparo</li>
+        </ul>
+        <a class="btn btn--principal" href="#inscricao">Quero receber</a>
+      </section>
+
+      <!-- ============================ INSCRIÇÃO ============================ -->
+      <section
+        class="inscricao"
+        data-section="inscricao"
+        id="inscricao"
+        aria-labelledby="inscricao-titulo"
+      >
+        <div class="inscricao__intro">
+          <h2 id="inscricao-titulo">Ficha de inscrição</h2>
+          <p class="cabecalho__lead">
+            Preencha com calma. Nossa equipe responde em até 24h com o roteiro
+            ideal para o seu nível.
+          </p>
+          <h3 class="inscricao__subtitulo">O que levar na primeira trilha</h3>
+          <ul class="inscricao__levar">
+            <li>🎒 Mochila de ataque (20 a 30 L)</li>
+            <li>👟 Tênis ou bota com solado firme</li>
+            <li>💧 2 litros de água</li>
+            <li>🧢 Boné, protetor e capa de chuva</li>
+          </ul>
+        </div>
+
+        <form class="ficha" action="#" method="post">
+          <div class="ficha__linha">
+            <div class="campo">
+              <label for="f-nome">Nome completo</label>
+              <input id="f-nome" name="nome" type="text" required autocomplete="name" />
+            </div>
+            <div class="campo">
+              <label for="f-email">E-mail</label>
+              <input id="f-email" name="email" type="email" required autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="ficha__linha">
+            <div class="campo">
+              <label for="f-tel">Celular (WhatsApp)</label>
+              <input
+                id="f-tel"
+                name="telefone"
+                type="tel"
+                placeholder="(00) 00000-0000"
+                required
+                autocomplete="tel"
+              />
+            </div>
+            <div class="campo">
+              <label for="f-nascimento">Data de nascimento</label>
+              <input id="f-nascimento" name="nascimento" type="date" required />
+            </div>
+          </div>
+
+          <fieldset class="grupo">
+            <legend>Qual é a sua experiência?</legend>
+            <label class="opcao"><input type="radio" name="nivel" value="nunca" /> Nunca fiz trilha</label>
+            <label class="opcao"><input type="radio" name="nivel" value="algumas" /> Já fiz algumas</label>
+            <label class="opcao"><input type="radio" name="nivel" value="sempre" /> Faço sempre</label>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <legend>Já acampou?</legend>
+            <label class="opcao"><input type="radio" name="acampou" value="sim" /> Sim</label>
+            <label class="opcao"><input type="radio" name="acampou" value="nao" /> Não</label>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <legend>Equipamento que você já tem</legend>
+            <label class="opcao"><input type="checkbox" name="equipamento" value="mochila" /> Mochila cargueira</label>
+            <label class="opcao"><input type="checkbox" name="equipamento" value="bota" /> Bota de trilha</label>
+            <label class="opcao"><input type="checkbox" name="equipamento" value="lanterna" /> Lanterna de cabeça</label>
+            <label class="opcao"><input type="checkbox" name="equipamento" value="barraca" /> Barraca</label>
+          </fieldset>
+
+          <div class="ficha__linha">
+            <div class="campo">
+              <label for="f-roteiro">Roteiro de interesse</label>
+              <select id="f-roteiro" name="roteiro">
+                <option value="">Ainda não sei</option>
+                <option>Serra</option>
+                <option>Litoral</option>
+                <option>Cachoeiras</option>
+                <option>Noturna</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="f-distancia">Distância máxima por dia</label>
+              <input
+                id="f-distancia"
+                name="distancia"
+                type="range"
+                min="5"
+                max="30"
+                value="12"
+                oninput="document.getElementById('f-distancia-valor').value = this.value"
+              />
+              <small class="campo__dica">Até <output id="f-distancia-valor" for="f-distancia">12</output> km</small>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="f-saude">Alguma restrição de saúde ou alergia?</label>
+            <textarea id="f-saude" name="saude" rows="4"></textarea>
+            <small class="campo__dica">Essa informação fica só com o guia da sua saída.</small>
+          </div>
+
+          <label class="opcao ficha__termos">
+            <input type="checkbox" name="termos" required />
+            <span>Li e aceito o <a href="#">termo de responsabilidade</a>.</span>
+          </label>
+
+          <button class="btn btn--principal btn--largo" type="submit">Enviar inscrição</button>
+        </form>
+      </section>
+
+      <!-- ============================ DEPOIMENTOS ============================ -->
+      <section
+        class="depoimentos"
+        data-section="depoimentos"
+        id="depoimentos"
+        aria-labelledby="depoimentos-titulo"
+      >
+        <header class="cabecalho">
+          <h2 id="depoimentos-titulo">Quem já foi, voltou</h2>
+          <p class="cabecalho__lead">E quase sempre voltou para a próxima saída.</p>
+        </header>
+
+        <ul class="depoimentos__grade">
+          <li class="depoimento">
+            <p class="depoimento__nota"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">5 estrelas</span></p>
+            <blockquote class="depoimento__texto">
+              <p>“Fui sem nunca ter feito trilha e o guia esperou cada um no seu ritmo. Chegar no cume dos Marins foi inesquecível.”</p>
+            </blockquote>
+            <p class="depoimento__autor">
+              <span class="depoimento__avatar" aria-hidden="true">🧗</span>
+              <span><strong>Júlia M.</strong> São Paulo, SP</span>
+            </p>
+          </li>
+          <li class="depoimento depoimento--destaque">
+            <p class="depoimento__nota"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">5 estrelas</span></p>
+            <blockquote class="depoimento__texto">
+              <p>“Já fiz seis saídas com a Passo Alto. O transporte é pontual e o grupo pequeno faz toda a diferença.”</p>
+            </blockquote>
+            <p class="depoimento__autor">
+              <span class="depoimento__avatar" aria-hidden="true">🥾</span>
+              <span><strong>Renato A.</strong> Campinas, SP</span>
+            </p>
+          </li>
+          <li class="depoimento">
+            <p class="depoimento__nota"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">5 estrelas</span></p>
+            <blockquote class="depoimento__texto">
+              <p>“A trilha noturna da Pedra Grande foi o melhor presente de aniversário que eu me dei.”</p>
+            </blockquote>
+            <p class="depoimento__autor">
+              <span class="depoimento__avatar" aria-hidden="true">🌄</span>
+              <span><strong>Carla S.</strong> Santos, SP</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- ============================ RODAPÉ ============================ -->
+    <footer class="rodape">
+      <div class="rodape__colunas">
+        <div class="rodape__coluna rodape__coluna--marca">
+          <p class="rodape__titulo">Passo Alto</p>
+          <p>Expedições de trilha com guia, transporte e grupo pequeno desde 2019.</p>
+          <form class="newsletter" action="#" method="post" aria-label="Assinar novidades">
+            <label class="visually-hidden" for="nl-email">Seu e-mail</label>
+            <input id="nl-email" name="email" type="email" placeholder="Seu e-mail" />
+            <button class="btn btn--principal btn--pequeno" type="submit">Assinar</button>
+          </form>
+        </div>
+
+        <div class="rodape__coluna">
+          <p class="rodape__titulo">Trilhas</p>
+          <ul>
+            <li><a href="#roteiros">Roteiros</a></li>
+            <li><a href="#saidas">Calendário</a></li>
+            <li><a href="#">Níveis de dificuldade</a></li>
+          </ul>
+        </div>
+
+        <div class="rodape__coluna">
+          <p class="rodape__titulo">Empresa</p>
+          <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Nossos guias</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="rodape__coluna">
+          <p class="rodape__titulo">Redes</p>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Strava</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="rodape__marca" aria-hidden="true">Passo Alto</p>
+      <p class="rodape__legal">© 2026 Passo Alto Expedições. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

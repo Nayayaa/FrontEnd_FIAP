@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandeira - Chile</title>
+  <style>
+    /* =====================================================================
+       Tarefa — Bandeiras com Flexbox  (copie este arquivo 3 vezes:
+       flag1.html, flag2.html, flag3.html)
+       ===================================================================== */
+
+    /* ----------  Reset (não mexa)  ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 24px;
+      background: #cccccc;
+    }
+
+    /* ----------  Caixa da bandeira  ----------
+       Não altere width/height. Única exceção: Nigéria (height: 270px).
+       O display:flex e tudo que vem depois é com você. */
+    .flag {
+      width: 540px;
+      height: 360px;
+    }
+
+    /* =====================================================================
+       FORMAS PRONTAS — o teste é flexbox, não clip-path.
+       Você só define width (e a cor, com background-color) no seu seletor.
+       Exemplo:  .estrela { width: 160px; background-color: #FFFFFF; }
+       e no HTML: <div class="star estrela"></div>
+
+       Círculos e semicírculos não vêm prontos: use border-radius
+       (e overflow: hidden, se precisar cortar o que está dentro).
+       ===================================================================== */
+
+    /* Estrela de 5 pontas */
+    .star {
+      aspect-ratio: 1;
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+    }
+
+    /* Pentagrama vazado (Marrocos) — defina width e a cor, como na estrela */
+    .pentagram {
+      aspect-ratio: 1;
+      clip-path: polygon(
+        evenodd,
+        50.00% 0.00%, 61.23% 34.55%, 97.55% 34.55%, 68.16% 55.90%, 79.39% 90.45%, 50.00% 69.10%, 20.61% 90.45%, 31.84% 55.90%, 2.45% 34.55%, 38.77% 34.55%, 50.00% 0.00%,
+        57.59% 39.55%, 62.29% 53.99%, 50.00% 62.92%, 37.71% 53.99%, 42.41% 39.55%, 57.59% 39.55%, 50.00% 0.00%,
+        50.00% 16.18%, 55.97% 34.55%, 44.03% 34.55%, 50.00% 16.18%, 50.00% 0.00%,
+        82.16% 39.55%, 66.54% 50.90%, 62.85% 39.55%, 82.16% 39.55%, 50.00% 0.00%,
+        69.88% 77.36%, 54.25% 66.01%, 63.91% 58.99%, 69.88% 77.36%, 50.00% 0.00%,
+        30.12% 77.36%, 36.09% 58.99%, 45.75% 66.01%, 30.12% 77.36%, 50.00% 0.00%,
+        17.84% 39.55%, 37.15% 39.55%, 33.46% 50.90%, 17.84% 39.55%, 50.00% 0.00%
+      );
+    }
+
+    /* =====================================================================
+       A PARTIR DAQUI É COM VOCÊ
+       ===================================================================== */
+
+       body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+       }
+
+       .flag {
+        display: flex;
+        flex-direction: column;
+       }
+
+       .metade1 {
+        flex: 1;
+        display: flex;
+       }
+
+       .metade2 {
+        flex: 1;
+        background-color: #D52B1E;
+       }
+
+       .quadrado {
+        width: 180px;
+        background-color: #0039A6;
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       .branco {
+        flex: 1;
+        background-color: #FFFFFF;
+       }
+
+       .estrela {
+        width: 100px;
+        background-color: #FFFFFF;
+       }
+  </style>
+</head>
+<body>
+  <!-- Nome: Vanessa Santos Martins de Lima Nascimento   RM: 576450   País: Chile -->
+  <main>
+
+    <div class="flag">
+      <div class="metade1">
+        <div class="quadrado">
+          <div class="star estrela"></div>
+        </div>
+        <div class="branco"></div>
+      </div>
+      <div class="metade2"></div>
+    </div>
+
+  </main>
+</body>
+</html>
